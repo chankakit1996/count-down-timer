@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
-import HelloWorld from '@/components/HelloWorld.vue'
+import CountDownTimer from '@/components/CountDownTimer.vue'
 const routes: Array<RouteRecordRaw> = [
   {
     path: '',
@@ -7,8 +7,8 @@ const routes: Array<RouteRecordRaw> = [
   },
   {
     path: '/home',
-    name: 'HelloWorld',
-    component: HelloWorld,
+    name: 'CountDownTimer',
+    component: CountDownTimer,
   },
   {
     path: "/:catchAll(.*)",
