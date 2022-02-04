@@ -5,7 +5,10 @@ import path from "path";
 // https://vitejs.dev/config/
 export default defineConfig({
     plugins: [vue()],
-    base: "/count-down-timer/",
+    base: process.env.NODE_ENV === 'production' ? '/count-down-timer/' : './',
+    build: {
+        minify: true
+    },
     resolve: {
         alias: {
             "@": path.resolve(__dirname, "./src"),

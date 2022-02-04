@@ -2,7 +2,7 @@ import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 import CountDownTimer from '@/components/CountDownTimer.vue'
 const routes: Array<RouteRecordRaw> = [
   {
-    path: '',
+    path: '/count-down-timer',
     component: CountDownTimer,
   },
   {
