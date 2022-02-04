@@ -3,20 +3,15 @@ import CountDownTimer from '@/components/CountDownTimer.vue'
 const routes: Array<RouteRecordRaw> = [
   {
     path: '',
-    redirect: '/home',
-  },
-  {
-    path: '/home',
-    name: 'CountDownTimer',
     component: CountDownTimer,
   },
   {
     path: "/:catchAll(.*)",
-    redirect: '/home',
+    redirect: '/',
   },
 ]
 const router = createRouter({
-  history: createWebHistory(''),
+  history: createWebHistory(),
   routes,
   scrollBehavior(to, from, savedPosition) {
     return {
