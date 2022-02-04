@@ -1,8 +1,9 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 import CountDownTimer from '@/components/CountDownTimer.vue'
+import { repo } from '../config/config';
 const routes: Array<RouteRecordRaw> = [
   {
-    path: '/count-down-timer',
+    path: '',
     component: CountDownTimer,
   },
   {
@@ -10,6 +11,9 @@ const routes: Array<RouteRecordRaw> = [
     redirect: '/',
   },
 ]
+routes.forEach(route => {
+  route.path = `/${repo}/` + route.path
+});
 const router = createRouter({
   history: createWebHistory(),
   routes,
