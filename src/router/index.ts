@@ -11,11 +11,8 @@ const routes: Array<RouteRecordRaw> = [
     redirect: '/',
   },
 ]
-routes.forEach(route => {
-  route.path = `/${repo}/` + route.path
-});
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory(`/${repo}/`),
   routes,
   scrollBehavior(to, from, savedPosition) {
     return {
